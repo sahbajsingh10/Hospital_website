@@ -1,0 +1,101 @@
+/* table-styles.css */
+
+body {
+    padding-top: 16vh !important;
+}
+
+/* Slightly narrower container */
+.container.my-5 {
+    max-width: 85% !important; /* Reduced from 95% */
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+/* Bigger title */
+.container.my-5 h1 {
+    margin-top:15px;
+    font-size: 3rem;
+    color: #2e8b57;
+    position: relative;
+    left:20px;
+}
+
+/* Table container */
+.table-responsive {
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+#userTable, #appointmenttypeTable, #assignmenttypeTable, #stafftypeTable, #appointmentTable, #patientprofileTable, #staffprofileTable, #staffassignmentTable {
+    width: 100% !important;
+}
+
+#userTable thead th, #appointmenttypeTable thead th, #assignmenttypeTable thead th, #stafftypeTable thead th, #appointmentTable thead th, #patientprofileTable thead th, #staffprofileTable thead th, #staffassignmentTable thead th{
+    background-color: #2e8b57;
+    color: white;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+/* Keep images consistent */
+.imageTable {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Action buttons spacing */
+.btn-sm {
+    margin: 0.25rem;
+}
+
+/* DataTables controls positioning */
+.dataTables_length, 
+.dataTables_filter {
+    float: left !important;
+    text-align: left !important;
+    margin-bottom: 1rem;
+}
+
+.dataTables_length {
+    margin-right: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .container.my-5 {
+        max-width: 90% !important;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container.my-5 {
+        max-width: 95% !important;
+        padding: 0.5rem;
+    }
+    
+    .container.my-5 h1 {
+        font-size: 3rem;
+       
+    }
+    
+    /* Stack DataTables controls */
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_filter {
+        width: 100% !important;
+        text-align: left !important;
+        float: none !important;
+    }
+
+    .dataTables_wrapper .dataTables_filter input {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+}

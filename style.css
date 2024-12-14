@@ -1,0 +1,425 @@
+/* Add this at the top of your CSS file */
+html {
+  margin-right: calc(-1 * (100vw - 100%));
+  overflow-x: hidden;
+}
+
+/* Or alternatively, always show the scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4; padding-top: 130px;
+}
+.content {
+  padding: 20px;
+  text-align: center;
+  margin-top: calc(13.15vh + 20px); /* Create space for the fixed header */
+  height: calc(81.35vh - 20px); /* Adjust height to account for padding */
+  overflow-y: auto;
+}
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  padding: 2rem 0;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dashboard-header h2 {
+  color: #2e8b57;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  background: #2e8b57;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.card-icon i {
+  font-size: 1.5rem;
+}
+
+.dashboard-card h3 {
+  color: #333;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.dashboard-card .btn {
+  background-color: #2e8b57;
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-card .btn:hover {
+  background-color: #246b43;
+}
+
+.dashboard-card .btn i {
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card .btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-header h2 {
+      font-size: 2rem;
+  }
+
+  .dashboard-card {
+      margin-bottom: 1rem;
+  }
+}
+
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="text"] {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#register_form {
+  text-align: left;
+  border-bottom: 1px solid #ced4da;
+}
+
+#user_type_select {
+  width: 150px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e6b45;
+}
+
+.mb-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0px;
+  width: 40%;
+}
+
+#user_type {
+  justify-content: flex-start;
+}
+
+.mb-3 label {
+  flex-shrink: 0;
+}
+
+.invalid-feedback {
+  width: auto !important;
+}
+
+#user_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5vh;
+  right: 2.5vw;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  background: white;
+  min-width: 15vw;
+  max-width: 20vw;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+  flex-grow: 0;
+  visibility: hidden;
+  z-index: 1001;
+  color: black;
+}
+
+#user_card img {
+  object-fit: contain;
+  max-width: 90%;
+  padding: 2vh 0;
+  height: 15vh;
+}
+
+#user_card_controls {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2vh;
+  width: 90%;
+  gap: 1vh;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+#user_card_close, #user_card_options {
+  font-size: 2vmin;
+}
+
+#user_card_logout {
+  margin-bottom: 2vh;
+}
+
+#manage_profile_image_thumbnail {
+  width:  5vw;
+}
+
+/* Patient Dashboard Styles */
+.patient-dashboard {
+  padding: 2rem 0;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dashboard-header h2 {
+  color: #2e8b57;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  background: #2e8b57;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.card-icon i {
+  font-size: 1.5rem;
+}
+
+.dashboard-card h3 {
+  color: #333;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.dashboard-card .btn {
+  background-color: #2e8b57;
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-card .btn:hover {
+  background-color: #246b43;
+}
+
+.dashboard-card .btn i {
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card .btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-header h2 {
+      font-size: 2rem;
+  }
+
+  .dashboard-card {
+      margin-bottom: 1rem;
+  }
+}
+/* Staff Dashboard Styles */
+.staff-dashboard {
+  padding: 2rem 0;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dashboard-header h2 {
+  color: #2e8b57;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  background: #2e8b57;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.card-icon i {
+  font-size: 1.5rem;
+}
+
+.dashboard-card h3 {
+  color: #333;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.dashboard-card .btn {
+  background-color: #2e8b57;
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-card .btn:hover {
+  background-color: #246b43;
+}
+
+.dashboard-card .btn i {
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card .btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-header h2 {
+      font-size: 2rem;
+  }
+
+  .dashboard-card {
+      margin-bottom: 1rem;
+  }
+}

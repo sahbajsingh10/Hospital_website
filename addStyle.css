@@ -1,0 +1,130 @@
+/* Main styles for add pages */
+body {
+    background-color: #f5f8fa !important;
+    padding-top: 5vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px !important; /* Increased from 800px */
+    margin: 2rem auto;
+}
+
+/* Override Bootstrap's column width */
+.col-md-6 {
+    flex: 0 0 auto;
+    width:82% !important; /* Increased from default 50% */
+}
+
+/* Card styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #2e8b57 0%, #1a5632 100%) !important;
+    color: white !important;
+    border-radius: 10px 10px 0 0 !important;
+    padding: 1.5rem !important;
+    border: none;
+    text-align: left;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* Form styling */
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #2e8b57;
+    box-shadow: 0 0 0 0.2rem rgba(46, 139, 87, 0.25);
+}
+
+.form-label {
+    color: #2e8b57;
+    font-weight: 600;
+}
+
+/* Alert styling */
+.alert {
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border: none;
+}
+
+.alert-danger {
+    background-color: #ffe8e8;
+    color: #d63031;
+    border-left: 4px solid #d63031;
+}
+
+.alert-success {
+    background-color: #e8f5e9;
+    color: #2e8b57;
+    border-left: 4px solid #2e8b57;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #2e8b57 !important;
+    border-color: #2e8b57 !important;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #246b43 !important;
+    border-color: #246b43 !important;
+    transform: translateY(-2px);
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(46, 139, 87, 0.25);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding-top: 12vh;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .card-header {
+        padding: 1rem !important;
+    }
+
+    .card-header h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Make form full width on mobile */
+    .col-md-6 {
+        width: 100% !important;
+    }
+}
